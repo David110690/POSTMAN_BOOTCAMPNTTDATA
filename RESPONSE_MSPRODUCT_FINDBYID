@@ -1,0 +1,1 @@
+{"id":"0001","productName":"Cuenta Ahorro","productType":{"id":"T001","type":"pasivo"},"productRule":{"customerOwner":["Jose Perez","Mario Gonzales"],"commission":false,"movements":true,"quantityMaximumMovementsMonthly":100,"maximumLimitCredit":0.0}}

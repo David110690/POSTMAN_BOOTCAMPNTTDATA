@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "bda68dc1-23e8-4308-a35d-646bbccf4d18",
+		"name": "MSPRODUCT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MSPRODUCT_FINDBYID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8182/product/0001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8182",
+					"path": [
+						"product",
+						"0001"
+					]
+				}
+			},
+			"response": [{"id":"0001","productName":"Cuenta Ahorro","productType":{"id":"T001","type":"pasivo"},"productRule":{"customerOwner":["Jose Perez","Mario Gonzales"],"commission":false,"movements":true,"quantityMaximumMovementsMonthly":100,"maximumLimitCredit":0.0}}]
+		},
+		{
+			"name": "MSPRODUCT_CREATE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+				    "id" : "0001",
+				    "productName" : "Cuenta Ahorro",
+				    "productType" : {
+				        "id" : "T001",
+				        "type" : "pasivo"
+				    } ,
+				    "productRule" : {
+				        "customerOwner" : [
+				            "Jose Perez",
+				            "Mario Gonzales"
+				        ],
+				        "commission" : false,
+				        "movements" : true,
+				        "quantityMaximumMovementsMonthly" : 100,
+				        "maximumLimitCredit" : 0.0
+				    }
+				}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"0001\",\r\n    \"productName\" : \"Cuenta Ahorro\",\r\n    \"productType\" : {\r\n        \"id\" : \"T001\",\r\n        \"type\" : \"pasivo\"\r\n    } ,\r\n    \"productRule\" : {\r\n        \"customerOwner\" : [\r\n            \"Jose Perez\",\r\n            \"Mario Gonzales\"\r\n        ],\r\n        \"commission\" : false,\r\n        \"movements\" : true,\r\n        \"quantityMaximumMovementsMonthly\" : 100,\r\n        \"maximumLimitCredit\" : 0.0\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8182/product/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8182",
+					"path": [
+						"product",
+						""
+					]
+				}
+			},
+			"response": [{"id":"0001","productName":"Cuenta Ahorro","productType":{"id":"T001","type":"pasivo"},"productRule":{"customerOwner":["Jose Perez","Mario Gonzales"],"commission":false,"movements":true,"quantityMaximumMovementsMonthly":100,"maximumLimitCredit":0.0}}]
+		}
+	]
+}
